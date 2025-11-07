@@ -18,3 +18,14 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Chrome temp/profile
+.tmp_chrome_profile*/
+*.crdownload
+
+# WebDriver binárisok (ha nem akarod verziózni)
+chromedriver*
+geckodriver*
+
+# Secrets / config
+.env
