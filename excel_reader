@@ -1,0 +1,56 @@
+# utils/excel_reader.py
+from __future__ import annotations
+from pathlib import Path
+import re
+import pandas as pd
+from typing import List, Dict, Any
+
+def normalize_column_name(name: str) -> str:
+    """
+    Excel oszlopneveket normalizálunk: /, szóköz, ékezet stb. → _
+    Pl.: "Paciens/Nev" → "Paciens_Nev"
+    """
+    s = str(name)
+    # ékezetek helyett hagyjuk, mert lehet magyar — a nem alfanumerikus megy _
+    s = re.sub(r"[^0-9A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]+", "_", s).strip("_")
+    return s
+
+def load_sheet(path: Path | str, sheet_name: str) -> List[Dict[str, Any]]:
+    """
+    Beolvassa az adott munkalapot, normalizálja az oszlopneveket, majd
+    visszaadja soronként a rekordokat (dict).
+    Emellett előállítja a 'Vezeteknev' és 'Utonev' mezőket, ha van 'Paciens_Nev'.
+    """
+    path = Path(path)
+    df = pd.read_excel(path, sheet_name=sheet_name, engine="openpyxl")
+
+    # oszlopnevek normalizálása
+    df.columns = [normalize_column_name(c) for c in df.columns]
+
+    # névbontás, ha van Paciens_Nev
+    if "Paciens_Nev" in df.columns:
+        last_names = []
+        first_names = []
+        for full in df["Paciens_Nev"].astype(str).fillna(""):
+            full = full.strip()
+            if not full:
+                last_names.append("")
+                first_names.append("")
+                continue
+            parts = full.split(" ", 1)
+            ln = parts[0].strip()
+            fn = parts[1].strip() if len(parts) > 1 else ""
+            last_names.append(ln)
+            first_names.append(fn)
+        # ha nincs saját Vezeteknev/Utonev oszlop, adjuk hozzá
+        if "Vezeteknev" not in df.columns:
+            df["Vezeteknev"] = last_names
+        if "Utonev" not in df.columns:
+            df["Utonev"] = first_names
+
+    # egységes kulcsok még: amit TXT-ben használsz
+    # "Paciens/Azonosito" → "Paciens_Azonosito" már normalizálva van
+
+    # dict sorok
+    records = df.to_dict(orient="records")
+    return records

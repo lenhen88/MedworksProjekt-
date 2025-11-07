@@ -1,0 +1,409 @@
+{
+    "Product":  "HisPlatform",
+    "BuildType":  "QA",
+    "Branch":  "hotfix/hu/1.20.1",
+    "CreatedAt":  "2025-10-09 15:37:22",
+    "SetupKitBuildComputer":  "ACE-HU-I9-ITK01",
+    "SetupKitBuildNumber":  "1.20.1-B54676-HisPlatform-QA-hotfix",
+    "BackendBuildId":  54677,
+    "BackendBuildDefinitionId":  4,
+    "BackendBuild":  "HisPlatform-QA-Backend",
+    "BackendBranch":  "hotfix/hu/1.20.1",
+    "BackendBuildNumber":  "0.1.1-alpha54677-1.20.1",
+    "WebAppBuildId":  54678,
+    "WebAppBuildDefinitionId":  7,
+    "WebAppBuild":  "HisPlatform-QA-WebApp",
+    "WebAppBranch":  "hotfix/hu/1.20.1",
+    "WebAppBuildNumber":  "0.1.1-alpha54678-1.20.1",
+    "JiraTickets":  [
+                        "Error: Ticket not found HISP-14367, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14324, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14352, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14361, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14326, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14351, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14347, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14331, internal error: The remote server returned an error: (404) Not Found.",
+                        "Error: Ticket not found HISP-14344, internal error: The remote server returned an error: (404) Not Found."
+                    ],
+    "TfsChanges":  [
+                       {
+                           "id":  "b443688d8cfc8198b1a2fe75dffc009bafb071da",
+                           "message":  "HISP-14367",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-08T15:41:38Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/b443688d8cfc8198b1a2fe75dffc009bafb071da",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "9f8d61b82a215bc0826cb5aa8c755d0ec45ae80c",
+                           "message":  "Merge remote-tracking branch \u0027origin/hotfix/hu/1.20.1\u0027 into hotfix/hu/1.20.1",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-08T09:51:45Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/9f8d61b82a215bc0826cb5aa8c755d0ec45ae80c",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "b10e3cd73147c9edadfc5799eba18514978b26e9",
+                           "message":  "HISP-14324 BundleOptimizer v4 - iterative resolution, additional rules",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-08T06:45:33Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/b10e3cd73147c9edadfc5799eba18514978b26e9",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "2bf62cdb7088c6997f46e88e8e7e43f33c2519a7",
+                           "message":  "HISP-14352",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-07T14:06:25Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/2bf62cdb7088c6997f46e88e8e7e43f33c2519a7",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "f80bd61f141e2d502ffe8da2e81b63eacf3f8f8d",
+                           "message":  "HISP-14361",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-07T07:47:05Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/f80bd61f141e2d502ffe8da2e81b63eacf3f8f8d",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "47b39e2d537131e51f99fbc56629f89ca898818a",
+                           "message":  "HISP-14326 Fix tests",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-02T10:03:42Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/47b39e2d537131e51f99fbc56629f89ca898818a",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "4d37903110f58d76efcbcd2800d3e4b812002831",
+                           "message":  "HISP-14326 Distinguish zero price from no pricing, add missing FinancedService.IsDeleted check",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-02T09:17:52Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/4d37903110f58d76efcbcd2800d3e4b812002831",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "7767703a3719d18a97869e4a5432cdc4572d5a8e",
+                           "message":  "HISP-14351 Fix handling of medical service panel services with no financing data",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-01T09:09:14Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/7767703a3719d18a97869e4a5432cdc4572d5a8e",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "87ea82f7f64f23799d73c02bb9965c47dc72192b",
+                           "message":  "HISP-14324 BundleOptimizer v3 - choose bundles first, then remaining products",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-01T07:42:57Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/87ea82f7f64f23799d73c02bb9965c47dc72192b",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "1d1172dd6dd178eaeef1c74a57c7d2638e88e2a0",
+                           "message":  "HISP-14347 Excel sheet cell format (value type)",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-30T08:13:00Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/1d1172dd6dd178eaeef1c74a57c7d2638e88e2a0",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "d08ee4ca9e03f2a8c316b97a82ffb264cfbbd11c",
+                           "message":  "HISP-14331 BundleOptimizer v2 - prioritize bundles instead of minimum price",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-29T14:09:55Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/d08ee4ca9e03f2a8c316b97a82ffb264cfbbd11c",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "48b2cb370c816e7fdb2fb314ac20283f374c6f22",
+                           "message":  "HISP-14344 Add missing version update for GasztroKlinika",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-26T08:08:10Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/48b2cb370c816e7fdb2fb314ac20283f374c6f22",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "e35d37265d217dbc0cca591a7ecd3d9cc0bc9a04",
+                           "message":  "HISP-14326 Review changes",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-25T10:11:23Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/4eff5580-4c13-4877-9490-19cd72116d1c/commits/e35d37265d217dbc0cca591a7ecd3d9cc0bc9a04",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "ef53f52ae2205ed7d020f6dd99384328344cfaf0",
+                           "message":  "HISP-14367",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-08T15:41:55Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/ef53f52ae2205ed7d020f6dd99384328344cfaf0",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "72a732b7226ad3a63e901626249b93bd31011981",
+                           "message":  "HISP-14352",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-07T14:06:42Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/72a732b7226ad3a63e901626249b93bd31011981",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "b1e99f88bc50567426280164ba8abe5ac8259984",
+                           "message":  "HISP-14349",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-07T07:59:15Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/b1e99f88bc50567426280164ba8abe5ac8259984",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "217223bd1c53922919799abb2a9926ffe3ed4eba",
+                           "message":  "HISP-14326 Upgrade Nuget packages",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-02T12:48:51Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/217223bd1c53922919799abb2a9926ffe3ed4eba",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "7f2f800be3530257e82217ab028519ecea046192",
+                           "message":  "HISP-14326 Distinguish zero price from no pricing",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-02T10:04:14Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/7f2f800be3530257e82217ab028519ecea046192",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "4e5a8ad555b6d5520628b11602d61bc50a794cfc",
+                           "message":  "HISP-14326 Display \"n/a\" instead of \"0 Ft\" for services without a price",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-10-01T07:58:56Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/4e5a8ad555b6d5520628b11602d61bc50a794cfc",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       },
+                       {
+                           "id":  "bee10646a6e595fd19dec522d68efcbfd43af11d",
+                           "message":  "HISP-14334",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "NCs",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNDk0Njc"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "csaba.nemes@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-26T09:27:23Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/bee10646a6e595fd19dec522d68efcbfd43af11d",
+                           "pusher":  "756008eb-5aff-4416-afbf-5015edf7be5e"
+                       },
+                       {
+                           "id":  "bb1417f17f602ca240ddb4d26a2225ffa2f6cf9e",
+                           "message":  "HISP-14326 Review changes",
+                           "type":  "TfsGit",
+                           "author":  {
+                                          "displayName":  "Alex Szólya",
+                                          "_links":  {
+                                                         "avatar":  {
+                                                                        "href":  "http://ace-hu-tfs/DefaultCollection/_apis/GraphProfile/MemberAvatars/win.Uy0xLTUtMjEtMjExOTE3MjE0MS0xNDQyNjUyNTAyLTEwMzQ3NTc4MDktNjEwODg"
+                                                                    }
+                                                     },
+                                          "id":  null,
+                                          "uniqueName":  "alex.szolya@asseco.hu"
+                                      },
+                           "timestamp":  "2025-09-25T10:11:20Z",
+                           "location":  "http://ace-hu-tfs/DefaultCollection/_apis/git/repositories/1dd76621-0a6a-41b3-acae-483c2e17d08a/commits/bb1417f17f602ca240ddb4d26a2225ffa2f6cf9e",
+                           "pusher":  "f3285748-e61c-40f0-b686-6114b36b6833"
+                       }
+                   ]
+}
