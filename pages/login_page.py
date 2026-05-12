@@ -1,8 +1,9 @@
-# pages/login_page.py
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
+from utils.logger import logger
+
 
 class LoginPage:
     def __init__(self, driver, login_url: str, timeout: int = 30):
@@ -10,85 +11,77 @@ class LoginPage:
         self.login_url = login_url
         self.timeout = timeout
 
-    # --------- segédek ---------
-    def _ready(self):
-        """Megvárja, hogy a DOM teljesen betöltődjön."""
-        WebDriverWait(self.driver, self.timeout).until(
-            lambda d: d.execute_script("return document.readyState") == "complete"
-        )
-
-    def _wait_url_not_contains(self, fragment: str, t: int = None):
-        t = t or self.timeout
-        WebDriverWait(self.driver, t).until(
-            lambda d: fragment not in d.current_url
-        )
-
-    def _wait_any_present(self, locators, t: int = None):
-        """Bármelyik (By, selector) megjelenése elegendő."""
-        t = t or self.timeout
-        def any_present(d):
-            for by, sel in locators:
-                try:
-                    if d.find_elements(by, sel):
-                        return True
-                except Exception:
-                    pass
-            return False
-        WebDriverWait(self.driver, t).until(any_present)
-
-    # --------- lépések ---------
-    def open(self):
-        self.driver.get(self.login_url)
-        # login oldal első field-je (username) megjelenik
-        WebDriverWait(self.driver, self.timeout).until(
-            EC.presence_of_element_located((By.ID, "username"))
-        )
-
-    def fill_username(self, username: str):
-        el = WebDriverWait(self.driver, self.timeout).until(
-            EC.presence_of_element_located((By.ID, "username"))
-        )
-        el.clear()
-        el.send_keys(username)
-
-    def fill_password(self, password: str):
-        el = WebDriverWait(self.driver, self.timeout).until(
-            EC.presence_of_element_located((By.ID, "password"))
-        )
-        el.clear()
-        el.send_keys(password)
-
-    def submit(self):
-        WebDriverWait(self.driver, self.timeout).until(
-            EC.element_to_be_clickable((By.ID, "kc-login"))
-        ).click()
-
     def login(self, username: str, password: str) -> bool:
-        self.open()
-        self.fill_username(username)
-        self.fill_password(password)
-        self.submit()
+        """
+        Robusztus login:
+        - mezők láthatóságára vár
+        - kattintható login gombra vár
+        - URL-váltást figyel
+        - majd a dashboard markerre vár: div[title='Ellátási idők']
+        """
 
-        try:
-            # 1) elhagyjuk az auth URL-t
-            self._wait_url_not_contains("protocol/openid-connect/auth", t=max(20, self.timeout))
-        except TimeoutException:
-            # nem mentünk tovább a login oldalról
-            return False
+        def attempt() -> bool:
+            try:  # ← EZ AZ ELSŐ (ÉS EGYETLEN) TRY
+                logger.info(f"Navigálás a login oldalra: {self.login_url}")
+                self.driver.get(self.login_url)
 
-        # 2) megvárjuk, míg a céloldal betölt
-        try:
-            self._ready()
-        except TimeoutException:
-            pass  # nem gond, megyünk tovább a vizuális elemekre
+                # mezők
+                user_field = WebDriverWait(self.driver, self.timeout).until(
+                    EC.visibility_of_element_located(
+                        (By.CSS_SELECTOR, "input[name='username'], #username")
+                    )
+                )
+                pass_field = WebDriverWait(self.driver, self.timeout).until(
+                    EC.visibility_of_element_located(
+                        (By.CSS_SELECTOR, "input[type='password'], #password")
+                    )
+                )
 
-        # 3) bármelyik post-login elem megjelenése sikernek számít
-        post_login_targets = [
-            (By.CSS_SELECTOR, '[data-automation-id="master_PageBoxHeaderTitle"]'),
-            (By.CSS_SELECTOR, '[data-automation-id="PatientRegister_CreateNewPatient"]'),
-        ]
-        try:
-            self._wait_any_present(post_login_targets, t=max(25, self.timeout))
+                # kitöltés
+                user_field.clear()
+                user_field.send_keys(username)
+                pass_field.clear()
+                pass_field.send_keys(password)
+
+                # login gomb
+                login_button = WebDriverWait(self.driver, self.timeout).until(
+                    EC.element_to_be_clickable(
+                        (By.CSS_SELECTOR, "#kc-login, button[type='submit']")
+                    )
+                )
+
+                logger.info("Kattintás a login gombra...")
+                login_button.click()
+
+                # URL már ne tartalmazza a login-t
+                WebDriverWait(self.driver, self.timeout).until(
+                    lambda d: "login" not in d.current_url.lower()
+                )
+
+                # Dashboard marker → Ellátási idők
+                WebDriverWait(self.driver, self.timeout).until(
+                    EC.visibility_of_element_located(
+                        (By.CSS_SELECTOR, 'div[title="Ellátási idők"]')
+                    )
+                )
+
+                logger.info("Sikeres login – dashboard betöltött!")
+                return True
+
+            # ← ITT VANNAK A HOZZÁ TARTOZÓ EXCEPTEK
+            except (TimeoutException, StaleElementReferenceException) as e:
+                logger.warning(f"Login kísérlet sikertelen (timeout/stale): {e}")
+                return False
+            except Exception as e:
+                logger.error(f"Váratlan hiba login közben: {e}")
+                return False
+
+        # első próbálkozás
+        if attempt():
             return True
-        except TimeoutException:
-            return False
+
+        # retry
+        import time
+        logger.info("Login újrapróbálása 2 másodperc múlva...")
+        time.sleep(2)
+        return attempt()
