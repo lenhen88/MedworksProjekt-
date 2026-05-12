@@ -58,3 +58,17 @@ flowchart TD
     V -- Nem --> W[🏁 Tételek futtatása véget ért]
 
     W --> END([End])
+
+## Páciensregisztráció – regisztracio.py
+
+Ez a script a MedWorks rendszerben végzi az új páciensek 
+automatikus regisztrációját. Az Excel fájlban (Páciensek munkalap) 
+megadott adatok alapján automatikusan kitölti a regisztrációs 
+űrlapot a webes felületen, majd megvárja a felhasználó jóváhagyását.
+
+### Főbb funkciók:
+✅ Config.json külső fájlból való betöltés  
+✅ Automatikus bejelentkezés  
+✅ Páciensadatok beolvasása Excel fájlból  
+✅ Automatikus adatbevitel a webes felületen  
+✅ Várás a felhasználóra – ellenőrzés és manuális mentés  
